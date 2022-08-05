@@ -1,0 +1,23 @@
+.heading-section {
+  background: linear-gradient(#ba6b6c, #ef9a9a, #ffcccb);
+  padding: 100px;
+}
+
+.container {
+  max-width: 800px;
+}
+
+.add-toda-box-container{
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.add-todo-box {
+  background: white;
+  padding: 25px;
+  /* border: 1px solid black; */
+  border-radius: 40px;
+  margin-top: -20px;
+  box-shadow: 0 4px 12px;
+}

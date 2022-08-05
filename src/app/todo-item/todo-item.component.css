@@ -1,0 +1,114 @@
+.todo-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    /* flex-direction: row; */
+    font-size: 18px;
+    padding: 35px 15px;
+    /* background: #eee; */
+    margin-top: 20px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .todo-item.completed {
+    color: rgb(228, 216, 216);
+  }
+  
+  .todo-item .check-box {
+    display: flex;
+    flex-shrink: 0;
+    border: 2px solid #eee;
+    border-radius: 50%;
+    height: 28px;
+    width: 28px;
+    margin-right: 20px;
+    transition: background-color 0.2s, border-color 0.2s;
+  }
+  
+  .todo-item .check-box i.material-symbols-outlined {
+    font-size: 20px;
+    margin: auto;
+    color: #333;
+    opacity: 0;
+    transition: 0.2s;
+  }
+  
+  .todo-item .check-box i.material-symbols-outlined:hover {
+    opacity: 1;
+  }
+  
+  .todo-item:hover .check-box {
+    background: #eee;
+  }
+  
+  .todo-item:hover .check-box i.material-symbols-outlined {
+    opacity: 0.28;
+  }
+  
+  .todo-item.completed .check-box {
+    background: rgb(93, 241, 175);
+    border-color: rgb(93, 241, 175);
+  }
+  
+  .todo-item.completed .check-box i.material-symbols-outlined {
+    opacity: 1;
+    color: black;
+  }
+  
+  .todo-item .todo-controls-box {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  
+    display: flex;
+  
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(2px);
+  
+    transition: opacity 0.2s,visibility 0.2s,transform 0.2s;
+  }
+  
+  .todo-item:hover .todo-controls-box{
+      opacity: 1;
+      visibility: visible;
+      transition-delay: 0.4s;
+  
+      transform: translateY(0);
+  }
+  
+  .todo-controls-box .todo-controls-button {
+    display: flex;
+    background: #eee;
+    /* border-radius: 7px; */
+    padding: 7px 10px;
+  }
+  
+  .todo-controls-box .todo-controls-button i.material-symbols-outlined {
+    font-size: 20px;
+  }
+  
+  .todo-controls-box .todo-controls-button:hover {
+    background: rgb(205, 198, 198);
+  }
+  
+  .todo-controls-box .todo-controls-button:active {
+      background: #e5e7e8;
+  }
+  
+  .todo-controls-box .todo-controls-button:first-of-type {
+      border-top-left-radius: 7px;
+  }
+  
+  .todo-controls-box .todo-controls-button:last-of-type {
+      border-top-right-radius: 7px;
+  }
+  
+  .todo-controls-box .todo-controls-button.is-danger:hover i.material-symbols-outlined{
+      color: rgb(140, 45, 45);
+  }
+
+  .todo-controls-box .todo-controls-button.is-danger:active i.material-symbols-outlined{
+    color: rgb(244, 10, 10);
+}
